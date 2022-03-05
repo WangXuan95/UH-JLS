@@ -18,7 +18,7 @@ FPGA-based Ultra-High Throughput JPEG-LS image encoder.
 
 # 使用方法
 
-[**RTL/uh_jls.sv**](https://github.com/WangXuan95/UH-JLS/blob/main/RTL/uh_jls.sv) 是用户可以调用的 JPEG-LS 压缩模块，它按行扫描（从左到右，从上到下）的顺序输入图像原始像素，输出 .**jls** 文件的内容。
+[**RTL/uh_jls.sv**](./RTL/uh_jls.sv) 是用户可以调用的 JPEG-LS 压缩模块，它按行扫描（从左到右，从上到下）的顺序输入图像原始像素，输出 .**jls** 文件的内容。
 
 ## 信号
 
