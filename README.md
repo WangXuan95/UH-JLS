@@ -59,7 +59,7 @@ FPGA-based Ultra-High Throughput JPEG-LS image encoder.
 
 ## 仿真相关文件
 
-* [**RTL/tb_uh_jls.sv**](https://github.com/WangXuan95/UH-JLS/blob/main/RTL/tb_uh_jls.sv) 是仿真代码。它调用 **uh_jls.sv** 进行仿真。
+* [**RTL/tb_uh_jls.sv**](./RTL/tb_uh_jls.sv) 是仿真代码。它调用 **uh_jls.sv** 进行仿真。
 * **images** 是仿真的输入文件夹，包含一些 .pgm 格式的 8bit 灰度图。 .pgm 格式存储的是未压缩的原始像素，可以使用 photoshop 等软件或[该网页](https://filext.com/file-extension/PGM)来查看。
 * **images_jls** 是仿真的输出文件夹，用于存放仿真输出的 .jls 压缩图像文件。.jls 文件可以用[该网站](https://filext.com/file-extension/JLS)查看。
 
