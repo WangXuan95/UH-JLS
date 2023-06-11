@@ -76,7 +76,7 @@ The operation steps of uh_jls is :
 
 ## Output JPEG-LS stream
 
-During inputting, **uh_jls** will output **JPEG-LS stream** simultaneously, which constitutes the data of a .jls file (including the file header and footer). When o_e=1, a valid output data is generated on o_data. Note that o_data is in **Little endian**, i.e., o _ data[7:0] is located at the front of the stream and o_data[63:56] is located at the back of the stream. If the currently output data is the last data in the output stream of an image, o_last=1. Otherwise, o_last=0.
+During inputting, **uh_jls** will output **JPEG-LS stream** simultaneously, which constitutes the data of a .jls file (including the file header and footer). When o_e=1, a valid output data is generated on o_data. Note that o_data is in **Little endian**, i.e., o_data[7:0] is located at the front of the stream and o_data[63:56] is located at the back of the stream. If the currently output data is the last data in the output stream of an image, o_last=1. Otherwise, o_last=0.
 
 　
 
@@ -154,7 +154,7 @@ You can add more .pgm files to **images** folder for simulation. The file names 
 JPEG-LS 有两代：
 
 - JPEG-LS baseline (ITU-T T.87) : 一般提到 JPEG-LS 默认都是指 JPEG-LS baseline。**本库也实现的是 JPEG-LS baseline 的 encoder** 。如果你对软件版本的 JPEG-LS baseline encoder 感兴趣，可以看 https://github.com/WangXuan95/JPEG-LS (C语言实现)
-- JPEG-LS extension (ITU-T T.870) : 其压缩率高于 JPEG-LS baseline ，但使用的非常少 (在网上搜不到任何代码) 。**本库与 JPEG-LS extension 无关！**不过我依照 ITU-T T.870 实现了 C 语言的 JPEG-LS extension，见 https://github.com/WangXuan95/JPEG-LS_extension
+- JPEG-LS extension (ITU-T T.870) : 其压缩率高于 JPEG-LS baseline ，但使用的非常少 (在网上搜不到任何代码) 。 **本库与 JPEG-LS extension 无关！** 不过我依照 ITU-T T.870 实现了 C 语言的 JPEG-LS extension，见 https://github.com/WangXuan95/JPEG-LS_extension
 
 　
 
@@ -232,7 +232,7 @@ JPEG-LS 有两代：
 修改 tb_load_and_feed_image.v 里的宏名 **BUBBLE_CONTROL** 可以决定相邻像素间插入多少个气泡 (气泡是指成功输入一个像素后，再空闲多少个周期才输入下一个像素) ：
 
 - **BUBBLE_CONTROL=0** 时，不插入任何气泡 (最高输入速率) 。
-- **BUBBLE_CONTROL>0** 时，插入 **BUBBLE_CONTROL **个气泡。
+- **BUBBLE_CONTROL>0** 时，插入 **BUBBLE_CONTROL** 个气泡。
 - **BUBBLE_CONTROL<0** 时，每次插入随机的 **0~(-BUBBLE_CONTROL)** 个气泡
 
 你可以往 **images** 文件夹中放入其它的 .pgm 文件来压缩，文件名必须形如 testXXX.pgm (XXX 是三个数字) 。
