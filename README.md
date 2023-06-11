@@ -9,29 +9,29 @@
 
 FPGA-based Ultra-High Throughput JPEG-LS image encoder.
 
-* for lossless 8-bit grayscale images compression.
-* Support Image height range is 1\~65536, width range is 5\~10240, and the width must be a multiple of 5.
-* Pixel-level parallelism using dynamic OoO scheduling. For natural images, the input throughput is about 4.5 pixels per clock cycle.
+* For lossless 8-bit grayscale images compression.
+* Support image height range 1\~65536, width range 5\~10240, and the width must be a multiple of 5.
+* Pixel-level parallelization using dynamic OoO scheduling. For natural images, the input throughput is about 4.5 pixels per clock cycle.
 
-This work comes from the following paper. If you use this code, please cite:
+If you use this code, please cite:
 
 > Xuan Wang, Lei Gong, Chao Wang, Xi Li, Xuehai Zhou : [UH-JLS: A Parallel Ultra-High Throughput JPEG-LS Encoding Architecture for Lossless Image Compression](https://ieeexplore.ieee.org/abstract/document/9643724). ICCD 2021: 335-343
 
-The Verilog code of this open source code is more standardized, but it does not optimize the circuit for calculating run-length in JPEG-LS's run-mode, resulting in the clock frequency can only reach 75 MHz on ZYNQ-7020.
+The Verilog code of this repo is more standardized, but it does not optimize the circuit of calculating run-length in JPEG-LS's run-mode, resulting in the clock frequency only reach 75 MHz on ZYNQ-7020.
 
-If you want 185MHz version on ZYNQ-7020, please contact me (629708558@qq.com), but this code was written in a hurry and not very standard.
+If you want 185MHz version on ZYNQ-7020, please contact me (629708558@qq.com), but this code was written in a hurry and not very standardized.
 
-Also, if you don't have high performance requirements, you can use another repo of mine https://github.com/WangXuan95/FPGA-JPEG-LS-encoder , which is a JPEG-LS encoder based on scalar pipeline, with an input throughput of 1 pixel per cycle and supports lossy compression.
+Also, if you don't need high performance, you can use another repo of mine https://github.com/WangXuan95/FPGA-JPEG-LS-encoder . It is a JPEG-LS encoder based on scalar pipeline, with an input throughput of 1 pixel per cycle and supports lossy compression.
 
 　
 
 # Background
 
-**JPEG-LS** (**JLS**) is a lossless/lossy image compression algorithm. Its lossless mode compression ratio is quite excellent, which is better than PNG, Lossless-JPEG2000, Lossless-WEBP, and Lossless-HEif. The file suffix for **JPEG-LS** compressed images is **jls**.
+**JPEG-LS** (**JLS**) is a lossless/lossy image compression stardard. Its lossless compression ratio is better than PNG, Lossless-JPEG2000, Lossless-WEBP, and Lossless-HEIF. The file suffix for **JPEG-LS** compressed images is **.jls**.
 
 JPEG-LS has two generations:
 
-- JPEG-LS baseline (ITU-T T.87): JPEG-LS refers to the JPEG-LS baseline by default. **This repo implements the encoder of JPEG-LS baseline**. If you are interested in the software version of JPEG-LS baseline encoder, see https://github.com/WangXuan95/JPEG-LS (C language)
+- JPEG-LS baseline (ITU-T T.87): JPEG-LS refers to the JPEG-LS baseline by default. **This repo implements the encoder of JPEG-LS baseline**. If you are interested in the software code of JPEG-LS baseline encoder, see https://github.com/WangXuan95/JPEG-LS (C language)
 - JPEG-LS extension (ITU-T T.870): Its compression ratio is higher than JPEG-LS baseline, but it is very rarely (even no code can be found online). **This repo is not about JPEG-LS extension**. However, I have a C implemented of JPEG-LS extension, see https://github.com/WangXuan95/JPEG-LS_extension
 
 　
