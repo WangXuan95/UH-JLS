@@ -17,11 +17,17 @@ If you use this code, please cite:
 
 > Xuan Wang, Lei Gong, Chao Wang, Xi Li, Xuehai Zhou : [UH-JLS: A Parallel Ultra-High Throughput JPEG-LS Encoding Architecture for Lossless Image Compression](https://ieeexplore.ieee.org/abstract/document/9643724). ICCD 2021: 335-343
 
-The Verilog code of this repo is more standardized, but it does not optimize the circuit of calculating run-length in JPEG-LS's run-mode, resulting in the clock frequency only reach 75 MHz on ZYNQ-7020.
+### Stable Version
 
-If you want 185MHz version on ZYNQ-7020, please contact me (629708558@qq.com), but this code was written in a hurry and not very standardized.
+The stable version (in folder [RTL](./RTL))  is not clock-optimized, resulting in the clock frequency only reach 75 MHz on ZYNQ-7020.
 
-Also, if you don't need high performance, you can use another repo of mine https://github.com/WangXuan95/FPGA-JPEG-LS-encoder . It is a JPEG-LS encoder based on scalar pipeline, with an input throughput of 1 pixel per cycle and supports lossy compression.
+### Development Version
+
+The 185MHz development version is in folder [RTL_develop_ver](./RTL_develop_ver).  When I have time, I will standardize it to be the stable version.
+
+### See Also
+
+If you don't need high performance, you can use another repo of mine https://github.com/WangXuan95/FPGA-JPEG-LS-encoder . It is a JPEG-LS encoder based on scalar pipeline, with an input throughput of 1 pixel per cycle and supports lossy compression.
 
 　
 
@@ -139,11 +145,17 @@ You can add more .pgm files to **images** folder for simulation. The file names 
 
 > Xuan Wang, Lei Gong, Chao Wang, Xi Li, Xuehai Zhou : [UH-JLS: A Parallel Ultra-High Throughput JPEG-LS Encoding Architecture for Lossless Image Compression](https://ieeexplore.ieee.org/abstract/document/9643724). ICCD 2021: 335-343
 
-本开源代码的 Verilog 编码较为规范，但没有优化 JPEG-LS 的 run-mode 下计算 run-length 的电路，导致时钟频率在 ZYNQ-7020 上的频率只能达到 75 MHz 。
+### 稳定版本
 
-如果想要在 ZYNQ-7020 上达到 185 MHz 的版本，请联系 629708558@qq.com (但这个代码编写仓促，编码不太规范)
+稳定版本在 [RTL](./RTL) 目录下，它的 Verilog 编码较为规范，但没有优化 JPEG-LS 的 run-mode 下计算 run-length 的电路，导致时钟频率在 ZYNQ-7020 上的频率只能达到 75 MHz 。
 
-另外，如果你对性能要求不高，可以使用我的另一个库： https://github.com/WangXuan95/FPGA-JPEG-LS-encoder ，它是基于标量流水线的 JPEG-LS encoder ，输入吞吐率为 1 个像素每周期，而且支持有损压缩。
+### 开发版本
+
+开发版本在 [RTL_develop_ver](./RTL_develop_ver) 目录下，频率在 ZYNQ-7020 上可以达到 185MHz。但是这个版本当前只有论文中所属的 "Pseudo-LS" 模式，是轻微有损的（而不是无损的），将来我会把这个版本修改为支持无损的，并作为正式版本。
+
+### 你还可以看看
+
+如果你对性能要求不高，可以使用我的另一个库： https://github.com/WangXuan95/FPGA-JPEG-LS-encoder ，它是基于标量流水线的 JPEG-LS encoder ，输入吞吐率为 1 个像素每周期，而且支持有损压缩。
 
 　
 
