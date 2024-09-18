@@ -37,8 +37,8 @@ If you don't need high performance, you can use another repo of mine https://git
 
 JPEG-LS has two generations:
 
-- JPEG-LS baseline (ITU-T T.87): JPEG-LS refers to the JPEG-LS baseline by default. **This repo implements the encoder of JPEG-LS baseline**. If you are interested in the software code of JPEG-LS baseline encoder, see https://github.com/WangXuan95/JPEG-LS (C language)
-- JPEG-LS extension (ITU-T T.870): Its compression ratio is higher than JPEG-LS baseline, but it is very rarely (even no code can be found online). **This repo is not about JPEG-LS extension**. However, I have a C implemented of JPEG-LS extension, see https://github.com/WangXuan95/JPEG-LS_extension
+- JPEG-LS baseline (ITU-T T.87): JPEG-LS refers to the JPEG-LS baseline by default. **This repo implements the encoder of JPEG-LS baseline**. If you are interested in the software code of JPEG-LS baseline encoder, see https://github.com/WangXuan95/ImCvt (C++ language)
+- JPEG-LS extension (ITU-T T.870): Its compression ratio is higher than JPEG-LS baseline, but it is very rarely (even no code can be found online). **This repo is not about JPEG-LS extension**. 
 
 　
 
@@ -165,8 +165,8 @@ You can add more .pgm files to **images** folder for simulation. The file names 
 
 JPEG-LS 有两代：
 
-- JPEG-LS baseline (ITU-T T.87) : 一般提到 JPEG-LS 默认都是指 JPEG-LS baseline。**本库也实现的是 JPEG-LS baseline 的 encoder** 。如果你对软件版本的 JPEG-LS baseline encoder 感兴趣，可以看 https://github.com/WangXuan95/JPEG-LS (C语言实现)
-- JPEG-LS extension (ITU-T T.870) : 其压缩率高于 JPEG-LS baseline ，但使用的非常少 (在网上搜不到任何代码) 。 **本库与 JPEG-LS extension 无关！** 不过我依照 ITU-T T.870 实现了 C 语言的 JPEG-LS extension，见 https://github.com/WangXuan95/JPEG-LS_extension
+- JPEG-LS baseline (ITU-T T.87) : 一般提到 JPEG-LS 默认都是指 JPEG-LS baseline。**本库也实现的是 JPEG-LS baseline 的 encoder** 。如果你对软件版本的 JPEG-LS baseline encoder 感兴趣，可以看 https://github.com/WangXuan95/ImCvt (C++实现)
+- JPEG-LS extension (ITU-T T.870) : 其压缩率高于 JPEG-LS baseline ，但使用的非常少 (在网上搜不到任何代码) 。 **本库与 JPEG-LS extension 无关！** 
 
 　
 
